@@ -1,5 +1,6 @@
 # Common_Sence_Coffee
 
+[screen-capture (1).webm](https://github.com/thehiddengem/Common_Sence_Coffee/assets/86574646/edb5ee4b-8a06-46cd-9eca-9e7af8e99208)
 
 
 Welcome to Common Sense Coffee.
