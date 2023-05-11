@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Common Sense Coffee</title>
+    <link rel="stylesheet" href="stylesheet.css">
+
+</head>
+<body>
+  <header>
+      <nav>
+          <ul>
+              <li>
+                  <a class="logo" href="HomePage.html">Logo</a>
+              </li>
+              <li class="mobile"><a href="HomePage.html"><img src="images/home.png">Home</a></li>
+              <li class="mobile"><a href="Menu.html"><img src="images/menu.png">Menu</a></li>
+              <li class="mobile" ><a href="AboutPage.html"><img src="images/about.png">About Us</a></li>
+              <li class="mobile"><a href="Forum.html"><img src="images/chat.png">Forums</a></li> 
+              <li class="mobile" ><a href="Cart.html"><img src="images/cart.png"> Cart</a></li> 
+              <li class="dest_top"><a href="HomePage.html"><img src="images/home.png">Home</a></li>
+              <li class="dest_top"><a href="Menu.html"><img src="images/menu.png">Menu</a></li>
+              <li class="dest_top"><a href="AboutPage.html"><img src="images/about.png">About Us</a></li>
+              <li class="dest_top"><a href="Forum.html"><img src="images/chat.png">Forums</a></li>
+              <li class="dest_top"><a href="Cart.html"><img src="images/cart.png"> Cart</a></li>
+          </ul>
+      </nav>
+      <h1>My Cart</h1>
+  </header>
+  <table>
+      <thead>
+          <tr class ="trClass">
+            <th>Image</th>
+              <th>Drink</th>
+              <th>Customizations</th>
+              <th>Price</th>
+              <th>Remove</th>
+          </tr>
+      </thead>
+      <tbody id="cart-list">
+      </tbody>
+  </table>
+  
+  <h3 id="cart-info"></h3>
+  <button id="proceedToCheckout" class="submitButton" onclick="proceedToCheckout()">Proceed to Checkout</button>
+
+
+    <script>
+        // Get the cart from HTML5 storage
+        let cart = JSON.parse(localStorage.getItem('orders')) || [];
+
+        // Create a function to display the cart
+        function displayCart() {
+            let cartList = document.getElementById('cart-list');
+            cartList.innerHTML = '';
+
+            if (cart.length === 0) {
+                let emptyCart = document.createElement('p');
+                emptyCart.textContent = 'Your cart is empty.';
+                cartList.appendChild(emptyCart);
+            } else {
+              localStorage.setItem('length', cart.length);
+                for (let i = 0; i < cart.length; i++) {
+                  let cartItem = document.createElement('tr');
+                  let cartItemImage = document.createElement('td');
+                  let cartItemCustomizations = document.createElement('td');
+                  let cartItemPrice = document.createElement('td');
+                  let cartItemRemove = document.createElement('td');
+                  let cartItemRemoveBtn = document.createElement('bt');
+                  let customizations = [];
+                  cartItemImage.innerHTML = `<img src="${cart[i].drinkImage}">`;
+                  cartItemImage.classList.add('cart-item-image');
+
+                    let cartItemDrink = document.createElement('td');
+                    cartItemDrink.textContent = cart[i].drinkName;
+                    if (cart[i].size !== 'none') {
+                        customizations.push(cart[i].size);
+                        }
+                        if (cart[i].flavor !== 'none') {
+                        customizations.push(cart[i].flavor);
+                        }
+                        if (cart[i].topping !== 'none') {
+                        customizations.push(cart[i].topping);
+                        }
+                        if (cart[i].sweetener !== 'none') {
+                        customizations.push(cart[i].sweetener);
+                        }
+                        if (cart[i].addin !== 'none') {
+                        customizations.push(cart[i].addin);
+                        }
+                        cartItemCustomizations.textContent = customizations.join(' - ');
+
+                
+                cartItemPrice.textContent = `${cart[i].price.toFixed(2)}`;
+
+                
+                cartItemRemoveBtn.textContent = 'Remove';
+                cartItemRemoveBtn.classList.add('remove-btn');
+                cartItemRemoveBtn.setAttribute('data-index', i);
+                cartItemRemove.appendChild(cartItemRemoveBtn);
+
+   
+
+                cartItem.appendChild(cartItemImage);
+                cartItem.appendChild(cartItemDrink);
+                cartItem.appendChild(cartItemCustomizations);
+                cartItem.appendChild(cartItemPrice);
+                cartItem.appendChild(cartItemRemove);
+                cartList.appendChild(cartItem);
+            }
+
+        }
+                     // Add event listeners to remove buttons
+                     let removeBtns = document.querySelectorAll('.remove-btn');
+                removeBtns.forEach((btn) => {
+                btn.addEventListener('click', (event) => {
+                let indexToRemove = event.target.getAttribute('data-index');
+                cart.splice(indexToRemove, 1);
+                localStorage.setItem('orders', JSON.stringify(cart));
+                displayCart();
+            });
+        });
+        displayCartTotal();
+
+
+       
+    }
+    // Create a function to calculate and display the cart total
+ function displayCartTotal() {
+        let cartTotal = document.getElementById('cart-info');
+        let total = 0;
+        for (let i = 0; i < cart.length; i++) {
+            total += cart[i].price;
+        }
+        // Save the note in Local Storage
+        localStorage.setItem('total', total.toFixed(2));
+        cartTotal.innerHTML = `Total: $${total.toFixed(2)}&nbsp&nbsp`;
+    }
+    // Call the function to display the cart
+    displayCart();
+    // Create a function to handle the checkout button click
+  function proceedToCheckout() {
+    window.location.href = 'checkout.html';
+    }
+</script>
+
+</body>
+
+</html>

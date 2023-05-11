@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Orders</title>
+</head>
+<body>
+	<h1>Orders</h1>
+	<button onclick="displayOrders()">Show Orders</button>
+	<div id="orderList"></div>
+
+	<script>
+		// Function to display orders
+		function displayOrders() {
+			let orders = JSON.parse(localStorage.getItem('orders'));
+
+			if (orders && orders.length > 0) {
+				let orderList = document.getElementById('orderList');
+				orderList.innerHTML = '';
+
+				// Loop through the orders and display them
+				for (let i = 0; i < orders.length; i++) {
+					let order = orders[i];
+
+					let orderDetails = `Drink: ${order.drinkName}<br>
+									   Flavor: ${order.flavor}<br>
+									   Topping: ${order.topping}<br>
+									   Addin: ${order.addin}<br>
+									   Sweetener: ${order.sweetener}<br>
+									   Size: ${order.size}<br>
+									   Price: $${order.price.toFixed(2)}`;
+
+					let orderDiv = document.createElement('div');
+					orderDiv.innerHTML = `<p>${order.name}: ${orderDetails}</p>
+										  <button onclick="deleteOrder(${i})">Delete</button>`;
+					orderList.appendChild(orderDiv);
+				}
+			} else {
+				alert('No orders found!');
+			}
+		}
+
+		// Function to delete an order
+		function deleteOrder(index) {
+			let orders = JSON.parse(localStorage.getItem('orders'));
+			orders.splice(index, 1);
+			localStorage.setItem('orders', JSON.stringify(orders));
+			displayOrders();
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Common Sense Coffee   </title>
+    <link rel="stylesheet" href="stylesheet.css">
+
+
+</head>
+
+<body>
+    <header> 
+      <a href="signin.html"><button>Sign In</button></a>
+
+        <nav>   
+          <ul>
+            <li >
+              <a class="logo" href="HomePage.html">Logo</a>
+            </li>
+          
+            <li class="mobile"><a href="HomePage.html"><img src="images/home.png">Home</a></li>
+            <li class="mobile"><a href="Menu.html"><img src="images/menu.png">Menu</a></li>
+            <li class="mobile" ><a href="AboutPage.html"><img src="images/about.png">About Us</a></li>
+            <li class="mobile"><a href="Forum.html"><img src="images/chat.png">Forums</a></li> 
+            <li class="mobile" ><a href="Cart.html"><img src="images/cart.png"> Cart</a></li> 
+
+            <li class="dest_top"><a href="HomePage.html"><img src="images/home.png">Home</a></li>
+            <li class="dest_top"><a href="Menu.html"><img src="images/menu.png">Menu</a></li>
+            <li class="dest_top"><a href="AboutPage.html"><img src="images/about.png">About Us</a></li>
+            <li class="dest_top"><a href="Forum.html"><img src="images/chat.png">Forums</a></li>
+            <li class="dest_top"><a href="Cart.html"><img src="images/cart.png"> Cart</a></li>
+          </ul>
+        </nav>
+        <h1>Menu</h1>
+      </header> 
+
+    
+    
+      
+  <section class="menu">
+    <div class="searchBar">
+       
+        <h2 onclick="displayAll('drinks')"> Drinks</h2>
+        <h4  onclick="toggleItems('Hot Coffees')">Hot Coffees</h4>
+        <h4  onclick="toggleItems('Cold Coffees')">Cold Coffees </h4>
+        <h4  onclick="toggleItems('Ice Teas')">Ice Teas</h4>
+
+
+        <h2 onclick="displayAll('beans')">Beans</h2>
+        <h4 onclick="toggleItems('Brazil')">Brazil </h4>
+        <h4 onclick="toggleItems('Vietnam')">Vietnam </h4>
+       
+
+        
+
+    </div>
+
+ 
+
+    
+    <div class ="mainMenu">
+        <h2 id = "name"> Main Menu</h2>
+        
+        <div class="HotCoffees">
+
+          <a href="MenuOptions.html?&name=Caffe Americano&image=https://globalassets.starbucks.com/assets/f12bc8af498d45ed92c5d6f1dac64062.jpg?impolicy=1by1_wide_topcrop_630" style="text-decoration: none;">
+            <div class="Menu" id="Hot Coffees">
+              <img src="https://globalassets.starbucks.com/assets/f12bc8af498d45ed92c5d6f1dac64062.jpg?impolicy=1by1_wide_topcrop_630">
+              <h2 class="Coffee-name">Caffe Americano</h2>
+            </div>
+          </a>
+        
+          <a href="MenuOptions.html?&name=Caffe Misto&image=https://globalassets.starbucks.com/assets/d668acbc691b47249548a3eeac449916.jpg?impolicy=1by1_wide_topcrop_630" style="text-decoration: none;">
+            <div class="Menu" id="Hot Coffees">
+              <img src="https://globalassets.starbucks.com/assets/d668acbc691b47249548a3eeac449916.jpg?impolicy=1by1_wide_topcrop_630">
+              <h2 class="Coffee-name">Caffe Misto</h2>
+            </div>
+          </a>
+        
+          <a href="MenuOptions.html?&name=Espresso&image=https://globalassets.starbucks.com/assets/ec519dd5642c41629194192cce582135.jpg?impolicy=1by1_wide_topcrop_630" style="text-decoration: none;">
+            <div class="Menu" id="Hot Coffees">
+              <img src="https://globalassets.starbucks.com/assets/ec519dd5642c41629194192cce582135.jpg?impolicy=1by1_wide_topcrop_630">
+              <h2 class="Coffee-name">Espresso</h2>
+            </div>
+          </a>
+        
+          <a href="MenuOptions.html?&name=Pistachio Latte&image=https://globalassets.starbucks.com/assets/7b7b3f0c3b36442cbbd88b0d86a56088.jpg?impolicy=1by1_wide_topcrop_630" style="text-decoration: none;">
+            <div class="Menu" id="Hot Coffees">
+              <img src="https://globalassets.starbucks.com/assets/7b7b3f0c3b36442cbbd88b0d86a56088.jpg?impolicy=1by1_wide_topcrop_630">
+              <h2 class="Coffee-name">Pistachio Latte</h2>
+            </div>
+          </a>
+        
+        </div>
+        
+        <div class="ColdCoffees">
+        
+          <a href="MenuOptions.html?&name=Iced Black Coffee&image=https://globalassets.starbucks.com/assets/103b2b745f4848f884b793696a4573b6.jpg?impolicy=1by1_wide_topcrop_630 " style="text-decoration: none;">
+            <div class="Menu" id="Cold Coffees">
+              <img src="https://globalassets.starbucks.com/assets/103b2b745f4848f884b793696a4573b6.jpg?impolicy=1by1_wide_topcrop_630">
+              <h2 class="Coffee-name">Iced Black Coffee</h2>
+            </div>
+          </a>
+        
+        
+    
+          <a href="MenuOptions.html?&name=Almondmike&image=https://globalassets.starbucks.com/assets/a651497f08314edd9a213950c2865e8c.jpg?impolicy=1by1_wide_topcrop_630" style="text-decoration: none;">
+            <div class="Menu" id="Cold Coffees">
+                <img src="https://globalassets.starbucks.com/assets/a651497f08314edd9a213950c2865e8c.jpg?impolicy=1by1_wide_topcrop_630">
+                <h2 class="Coffee-name">Almondmike </h2>
+            </div>
+        </a>
+        
+        <a href="MenuOptions.html?&name=Iced Latte&image=https://globalassets.starbucks.com/assets/f56f2f6798504d72812581fbd3c326b8.jpg?impolicy=1by1_wide_topcrop_630" style="text-decoration: none;"">
+            <div class="Menu" id="Cold Coffees">
+                <img src="https://globalassets.starbucks.com/assets/f56f2f6798504d72812581fbd3c326b8.jpg?impolicy=1by1_wide_topcrop_630">
+                <h2 class="Coffee-name">Iced Latte</h2>
+            </div>
+        </a>
+        
+        <a href="MenuOptions.html?&name=White Mocha&image=https://globalassets.starbucks.com/assets/b80d893714854b5c946ee6c7f0d369d7.jpg?impolicy=1by1_wide_topcrop_630" style="text-decoration: none;">
+            <div class="Menu" id="Cold Coffees">
+                <img src="https://globalassets.starbucks.com/assets/b80d893714854b5c946ee6c7f0d369d7.jpg?impolicy=1by1_wide_topcrop_630">
+                <h2 class="Coffee-name">White Mocha</h2>
+            </div>
+        </a>
+        
+    
+              </div>
+
+
+              <div class = "IceTeas">
+                <div class ="Menu" id = "Ice Teas">
+                  <a href="MenuOptions.html?&name=Iced Black Tea&image=https://globalassets.starbucks.com/assets/103b2b745f4848f884b793696a4573b6.jpg?impolicy=1by1_wide_topcrop_630" style="text-decoration: none;">
+                    <img src="https://globalassets.starbucks.com/assets/103b2b745f4848f884b793696a4573b6.jpg?impolicy=1by1_wide_topcrop_630">
+                    <h2 class="Coffee-name">Iced Black Tea</h2>
+                  </a>
+                  
+                  </div> 
+        
+                  <div class="Menu" id="Ice Teas">
+                    <a href="MenuOptions.html?&name=Chai Tea Latte&image=https://globalassets.starbucks.com/assets/98c8bafe1e2241f3ad02212eca2376e3.jpg?impolicy=1by1_wide_topcrop_630" style="text-decoration: none;">
+                        <img src="https://globalassets.starbucks.com/assets/98c8bafe1e2241f3ad02212eca2376e3.jpg?impolicy=1by1_wide_topcrop_630">
+                        <h2 class="Coffee-name">Chai Tea Latte</h2>
+                    </a>
+                </div> 
+                
+                <div class="Menu" id="Ice Teas">
+                    <a href="MenuOptions.html?&name=Iced Green Tea&image=https://globalassets.starbucks.com/assets/a3eacb2a29f1439f917d7dae230b2771.jpg?impolicy=1by1_wide_topcrop_630" style="text-decoration: none;">
+                        <img src="https://globalassets.starbucks.com/assets/a3eacb2a29f1439f917d7dae230b2771.jpg?impolicy=1by1_wide_topcrop_630">
+                        <h2 class="Coffee-name">Iced Green Tea</h2>
+                    </a>
+                </div> 
+                
+                <div class="Menu" id="Ice Teas">
+                    <a href="MenuOptions.html?&name=White Tea&image=https://globalassets.starbucks.com/assets/b80d893714854b5c946ee6c7f0d369d7.jpg?impolicy=1by1_wide_topcrop_630" style="text-decoration: none;">
+                        <img src="https://globalassets.starbucks.com/assets/b80d893714854b5c946ee6c7f0d369d7.jpg?impolicy=1by1_wide_topcrop_630">
+                        <h2 class="Coffee-name">White Tea</h2>
+                    </a>
+                </div> 
+                
+        
+                  </div>
+
+
+                  <div class = "Beans">
+
+                    <div class="Menu" id="Brazil">
+                      <a href="MenuOptions.html?&name=Decaf Roast&image=https://globalassets.starbucks.com/assets/b58ec53a78f24cfb82502cd5259cb764.jpg?impolicy=1by1_medium_630 style="text-decoration: none;">
+                        <img src="https://globalassets.starbucks.com/assets/b58ec53a78f24cfb82502cd5259cb764.jpg?impolicy=1by1_medium_630">
+                        <h2 class="Coffee-name">Medium Roast</h2>
+                      </a>
+                    </div>
+                    
+                    <div class="Menu" id="Vietnam">
+                      <a href="MenuOptions.html?&name=Decaf Roast&image=https://globalassets.starbucks.com/assets/e2192d480f1c4d3fa15cf5bfe4041f8d.jpg?impolicy=1by1_medium_630" style="text-decoration: none;">
+                        <img src="https://globalassets.starbucks.com/assets/e2192d480f1c4d3fa15cf5bfe4041f8d.jpg?impolicy=1by1_medium_630">
+                        <h2 class="Coffee-name">Decaf Roast</h2>
+                      </a>
+                    </div>
+            
+                    <div class="Menu" id="Brazil">
+                      <a href="MenuOptions.html?&name=Light Roastt&image=https://globalassets.starbucks.com/assets/b58ec53a78f24cfb82502cd5259cb764.jpg?impolicy=1by1_medium_630" style="text-decoration: none;">
+                        <img src="https://globalassets.starbucks.com/assets/b58ec53a78f24cfb82502cd5259cb764.jpg?impolicy=1by1_medium_630">
+                        <h2 class="Coffee-name">Light Roast</h2>
+                      </a>
+                    </div>
+                    
+                    <div class="Menu" id="Vietnam">
+                      <a href="MenuOptions.html?&name=Decaf Roast&image=https://globalassets.starbucks.com/assets/e2192d480f1c4d3fa15cf5bfe4041f8d.jpg?impolicy=1by1_medium_630" style="text-decoration: none;">
+                        <img src="https://globalassets.starbucks.com/assets/e2192d480f1c4d3fa15cf5bfe4041f8d.jpg?impolicy=1by1_medium_630">
+                        <h2 class="Coffee-name">Lincoln Roast</h2>
+                      </a>
+                    </div>
+                    
+            
+                        
+            
+                      </div>
+
+
+       
+
+
+
+
+    </div>
+
+    <script>
+        function toggleItems(id,className) {
+            nameElement = document.getElementById('name');
+            nameElement.textContent =id
+            const elementsToFilter = document.getElementsByClassName("Menu");
+
+            for (let i = 0; i < elementsToFilter.length; i++) {
+            
+
+            const element = elementsToFilter[i];
+            if (element.id == id) {
+
+            element.style.display = 'block';
+            } else {
+            element.style.display = 'none';
+            }
+            }
+        }
+
+    function displayAll(category){
+    nameElement = document.getElementById('name');
+    const elementsToFilter = document.getElementsByClassName("Menu");
+    if(category == "drinks"){
+        nameElement.textContent ="All Drinks"
+        for (let i = 0; i < elementsToFilter.length; i++) {
+            console.log(elementsToFilter[i].id)
+            if(elementsToFilter[i].id =="Vietnam" || elementsToFilter[i].id =="Brazil"){
+                elementsToFilter[i].style.display = 'none';
+            } else {
+                elementsToFilter[i].style.display = 'block';
+            }
+        }
+    } else {
+        nameElement.textContent ="All Beans"
+        for (let i = 0; i < elementsToFilter.length; i++) {
+            if(elementsToFilter[i].id =="Vietnam" || elementsToFilter[i].id =="Brazil" ){
+                elementsToFilter[i].style.display = 'block';
+            } else {
+                elementsToFilter[i].style.display = 'none';
+            }
+        }
+    }
+}
+
+            
+       
+    
+        
+      </script>
+  
+  
+     </section> 
+   
+  <footer> 
+    <section class = "social_media">
+        <a href="https://www.facebook.com/CommonSenseCoffee/" class="fa"><img src="images/fb.png" ></a>
+        <a href="https://www.instagram.com/commonsensecoffee/?hl=en" class="fa"><img src="images/lg.png" ></a>
+        <ahref="https://api.whatsapp.com/send?phone=%2B17242059605&data=AWC4JILt9HqH5niZP-P2HFfpFzK4UawqFy9Y9QmQzYo4eCcui2-W0L1FytCVR7wfOIU5iSDMt5zhC-zCelaF4EANaGAzWvo14GVNCydCEX43VkInNfQ-mGO3v2dX56RPYpqaK71OHabq5J9fg8C4120p-fnkw0HX7qeMScZk0ZGKpCZfWs2umWrOUHYCfJngMGQ8r0xBJMiwkX71ErLMXZJ7Suo794i8FviAC19InXePkMwG8S2lxYDlwJqTaVVhJpibEzt3wxySXDWrSyLKmg&source=FB_Page&app=facebook&entry_point=page_cta&fbclid=IwAR1zoIUkJ84p2ri1TIKOKtpudhxWaPTcGNdFo03Z6C0VMMdt__Fbahz0s9c" class="fa"><img src="images/whatsup.png"></a>
+
+
+        </section>
+        <p>
+    •&ensp;Common Sense Coffee Company LLC  
+    &emsp;•&ensp;1732 W Abingdon Dr 
+    Alexandria, VA 22314 
+    &emsp;•&ensp;(724) 205-9605 </p><footer>
+    
+</body>
+</html>
