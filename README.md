@@ -16,11 +16,3 @@ Finally, click "Add to Order" to add the item with customizations to your order.
 On the Cart page, you can remove unwanted items by clicking "Remove," or if you are ready to check out, click "Proceed to Checkout" at the bottom of the page. Enter your card information and click "Pay Now" to complete your order. You will be redirected to the Confirmation page where you will receive your confirmation number as well as the estimated delivery date.
 
 To return to the Home page, click the "Home" button in the middle of the screen or in the navigation bar. You can also explore the About Us page and Forums anytime you like.
-
-Each group member contibuted equally.
-Maciej - Menu Options Page, Read Order
-Hanna - Cart, Checkout, Confirmation Pages
-Gabe - Forums 
-Xiao -  About Us, Home, Menu Pages
-
-Everyobody worked on the CSS.
